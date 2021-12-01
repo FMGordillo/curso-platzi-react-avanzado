@@ -1,1 +1,3 @@
-console.log("Hello world!!!");
+import ReactDOM from 'react-dom'
+
+ReactDOM.render(<h1>Hola</h1>, document.getElementById('root'))

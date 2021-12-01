@@ -5,8 +5,11 @@
     "main": "index.js",
     "scripts": {
         "build": "webpack",
-        "dev": "webpack-dev-server",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "lint": "standard --verbose | snazzy",
+        "lint:fix": "standard --fix",
+        "dev": "webpack-dev-server --mode development",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "prepare": "husky install"
     },
     "repository": {
         "type": "git",
@@ -20,9 +23,25 @@
     },
     "homepage": "https://github.com/FMGordillo/curso-platzi-react-avanzado#readme",
     "devDependencies": {
+        "@babel/preset-env": "7.16.4",
+        "@babel/preset-react": "7.16.0",
+        "babel-loader": "8.2.3",
         "html-webpack-plugin": "5.5.0",
+        "husky": "^7.0.0",
+        "snazzy": "9.0.0",
+        "standard": "16.0.4",
         "webpack": "5.64.4",
         "webpack-cli": "4.9.1",
         "webpack-dev-server": "4.6.0"
+    },
+    "dependencies": {
+        "react": "17.0.2",
+        "react-dom": "17.0.2"
+    },
+    "standard": {
+        "ignore": [
+            "node_modules",
+            "api/**/*"
+        ]
     }
 }
