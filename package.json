@@ -10,15 +10,15 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/midudev/curso-platzi-react-avanzado.git"
+        "url": "git+https://github.com/FMGordillo/curso-platzi-react-avanzado.git"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/midudev/curso-platzi-react-avanzado/issues"
+        "url": "https://github.com/FMGordillo/curso-platzi-react-avanzado/issues"
     },
-    "homepage": "https://github.com/midudev/curso-platzi-react-avanzado#readme",
+    "homepage": "https://github.com/FMGordillo/curso-platzi-react-avanzado#readme",
     "devDependencies": {
         "html-webpack-plugin": "5.5.0",
         "webpack": "5.64.4",
