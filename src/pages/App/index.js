@@ -1,5 +1,6 @@
 import React from 'react'
 import { ListOfCategories } from '../../components/ListOfCategories'
+import { PhotoCard } from '../../components/PhotoCard'
 import { Main, Header, Nav, Title } from './styles'
 
 function App () {
@@ -17,6 +18,7 @@ function App () {
       <Title>Hello</Title>
       <p>Some content</p>
       <ListOfCategories />
+      <PhotoCard />
     </Main>
   )
 }
