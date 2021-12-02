@@ -1,5 +1,5 @@
 import React from 'react'
-import { Category } from '../../components/Category'
+import { ListOfCategories } from '../../components/ListOfCategories'
 import { Main, Header, Nav, Title } from './styles'
 
 function App () {
@@ -16,10 +16,7 @@ function App () {
       </Header>
       <Title>Hello</Title>
       <p>Some content</p>
-      <Category />
-      <Category />
-      <Category />
-      <Category />
+      <ListOfCategories />
     </Main>
   )
 }
