@@ -65,7 +65,7 @@ body {
   overscroll-behavior: none;
   width: 100%;
 }
-#app {
+main {
   box-shadow: 0 0 10px hsla(0deg, 0%, 0%, .05);
   overflow-x: hidden;
   min-height: 100%;

@@ -2,13 +2,12 @@ import styled from 'styled-components'
 
 export const List = styled.ul`
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  overflow: scroll;
   list-style: none;
-  width: 100%;
-  align-items: center;
+  overflow: scroll;
+  display: flex;
+  gap: 8px;
 `
 export const ListItem = styled.li`
-  padding: 0 8px;
+  display: flex;
+  flex: 0 0 auto;
 `

@@ -9,7 +9,7 @@ export function Category ({ cover = DEFAULT_IMAGE, path, emoji = '?' }) {
       <Figure>
         <Img src={cover} alt='Cover image' />
         <figcaption>
-          <i role='img'>Emoji representativo: {emoji}</i>
+          <i role='img'>{emoji}</i>
         </figcaption>
       </Figure>
     </Anchor>

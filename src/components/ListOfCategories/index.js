@@ -2,12 +2,24 @@ import React from 'react'
 import { Category } from '../Category'
 import { List, ListItem } from './styles'
 
+import data from '../../../api/db.json'
+
 export function ListOfCategories () {
-  const array = [1, 2, 3, 4, 5, 6, 7]
+  const { categories } = data || []
 
   return (
     <List>
-      {array.map(a => <ListItem key={a}><Category /></ListItem>)}
+      {categories.map(
+        category => (
+          <ListItem key={category.id}>
+            <Category
+              emoji={category.emoji}
+              cover={category.cover}
+              path={category.path}
+            />
+          </ListItem>
+        )
+      )}
     </List>
   )
 }
