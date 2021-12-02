@@ -1,4 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import styled from 'styled-components'
 
-ReactDOM.render(<h1>Hola</h1>, document.getElementById('root'))
+const Header = styled.h1`
+  color: red;
+`
+
+ReactDOM.render(
+  <React.StrictMode>
+    <div>
+      <Header>Hello</Header>
+      <p>This is an example</p>
+    </div>
+  </React.StrictMode>, document.getElementById('root'))
