@@ -64,6 +64,7 @@ body {
   max-width: 500px;
   overscroll-behavior: none;
   width: 100%;
+  margin: 0 auto;
 }
 main {
   box-shadow: 0 0 10px hsla(0deg, 0%, 0%, .05);

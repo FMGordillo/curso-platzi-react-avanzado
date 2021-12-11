@@ -5,7 +5,7 @@ import { List, ListItem } from './styles'
 import data from '../../../api/db.json'
 
 export function ListOfCategories () {
-  const { categories } = data || []
+  const { categories } = data || {}
 
   return (
     <List>
