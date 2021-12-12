@@ -7,9 +7,8 @@ const useScrollListener = () => {
 
   useEffect(() => {
     window.addEventListener('scroll', handleOnScroll)
-    return () => {
+    return () =>
       window.removeEventListener('scroll', handleOnScroll)
-    }
   }, [])
 
   return { scrollY }
