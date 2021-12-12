@@ -54,6 +54,30 @@ p, h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
+/*
+  10. Scrollbars upgraded
+*/
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: gray orange;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: gray;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: hsl(0deg, 0%, 70%);
+  border-radius: 20px;
+  border: 3px solid hsl(0deg, 0%, 40%);
+}
+
 body {
   background: black;
   color: hsl(50deg, 0%, 90%);
@@ -62,6 +86,7 @@ body {
   overscroll-behavior: none;
   width: 100%;
   margin: 0 auto;
+
 }
 main {
   box-shadow: 0 0 10px hsla(0deg, 0%, 0%, .05);
