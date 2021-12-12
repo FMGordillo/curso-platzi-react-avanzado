@@ -9,6 +9,8 @@ function App () {
       <Logo />
       <ListOfCategories />
       <PhotoCard id='1' />
+      <PhotoCard id='2' />
+      <PhotoCard id='3' />
     </Main>
   )
 }
