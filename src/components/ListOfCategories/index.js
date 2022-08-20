@@ -1,18 +1,26 @@
 import React, { useMemo } from 'react'
+import { useQuery } from 'react-query'
+import useScrollListener from '../../hooks/useScrollListener'
 import { Category } from '../Category'
 import { List, ListItem } from './styles'
-import useScrollListener from '../../hooks/useScrollListener'
 
-// import data from '../../../api/db.json'
+function useCategoriesData () {
+  const { isLoading, data } = useQuery('categories')
+  return {
+    isLoading,
+    data
+  }
+}
 
-export function ListOfCategories ({ categories, isLoading }) {
+export function ListOfCategories () {
+  const { isLoading, data } = useCategoriesData()
   const { scrollY } = useScrollListener()
 
   const showFixed = useMemo(() => scrollY > 210)
 
   const renderList = (showFixed = null) => (
-    <List className={showFixed === null ? '' : showFixed === false ? 'fixed hidden' : 'fixed'}>
-      {categories.map(
+    <List fixed={showFixed !== null} hidden={showFixed !== null && showFixed === false}>
+      {data.map(
         category => (
           <ListItem key={category.id}>
             <Category
