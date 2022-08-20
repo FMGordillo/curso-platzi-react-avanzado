@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useMemo } from 'react'
 import { Category } from '../Category'
 import { List, ListItem } from './styles'
 import useScrollListener from '../../hooks/useScrollListener'
@@ -6,12 +6,9 @@ import useScrollListener from '../../hooks/useScrollListener'
 // import data from '../../../api/db.json'
 
 export function ListOfCategories ({ categories, isLoading }) {
-  const [showFixed, setShowFixed] = useState(false)
   const { scrollY } = useScrollListener()
 
-  useEffect(() => {
-    setShowFixed(scrollY > 210)
-  }, [scrollY, setShowFixed])
+  const showFixed = useMemo(() => scrollY > 210)
 
   const renderList = (showFixed = null) => (
     <List className={showFixed === null ? '' : showFixed === false ? 'fixed hidden' : 'fixed'}>

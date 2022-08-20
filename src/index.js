@@ -7,7 +7,7 @@ import App from './pages/App'
 import GlobalStyles from './styles/GlobalStyles'
 
 const defaultQueryFn = async ({ queryKey }) => {
-  const rawData = await window.fetch(`https://curso-platzi-react-avanzado-api.vercel.app/${queryKey}`)
+  const rawData = await window.fetch(`http://localhost:3500/${queryKey}`)
   const json = await rawData.json()
   return json
 }

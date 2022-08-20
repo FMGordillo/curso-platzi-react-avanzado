@@ -1,7 +1,7 @@
 import React from 'react'
 import { useQuery } from 'react-query'
 import { ListOfCategories } from '../../components/ListOfCategories'
-import { PhotoCard } from '../../components/PhotoCard'
+import { ListOfPhotoCards } from '../../components/ListOfPhotoCards'
 import { Main, Logo } from './styles'
 
 function App () {
@@ -10,9 +10,7 @@ function App () {
     <Main>
       <Logo />
       <ListOfCategories categories={data} isLoading={isLoading} />
-      <PhotoCard id='1' />
-      <PhotoCard id='2' />
-      <PhotoCard id='3' />
+      <ListOfPhotoCards items={[1, 2, 3]} />
     </Main>
   )
 }
